@@ -1,0 +1,11 @@
+/* fonts.css */
+@font-face {
+  font-family: 'Coolvetica';
+  src: url('path/to/coolvetica.woff2') format('woff2'),
+       url('path/to/coolvetica.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;600&display=swap');
