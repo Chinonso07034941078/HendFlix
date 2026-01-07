@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-// Add font imports
-import './fonts.css'; // We'll create this file to import the fonts
-
 const fallbackImage = 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785660/q5_nqqjnv.jpg';
 
 const products = [
