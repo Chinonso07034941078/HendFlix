@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import {
   CheckCircle,
   TrendingUp,
@@ -75,6 +76,31 @@ const Partner = () => {
 
   const onChange = e =>
     setData({ ...data, [e.target.name]: e.target.value })
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+    // Create email body with form data
+    const emailBody = `
+Name: ${data.name}
+Company: ${data.company}
+Email: ${data.email}
+Phone: ${data.phone}
+Location: ${data.location}
+
+Message:
+ ${data.message}
+
+---
+This is a partnership application from the HendFlix website.
+    `.trim()
+    
+    // Create mailto link
+    const mailtoLink = `mailto:Hendflixx@gmail.com?subject=Partnership Application from ${data.name} - ${data.company}&body=${encodeURIComponent(emailBody)}`
+    
+    // Open email client
+    window.location.href = mailtoLink
+  }
 
   return (
     <div className="bg-white text-black">
@@ -184,7 +210,7 @@ const Partner = () => {
             Apply for Partnership
           </h2>
 
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={handleSubmit}>
             {['name', 'company', 'email', 'phone', 'location'].map((f) => (
               <input
                 key={f}
@@ -203,7 +229,7 @@ const Partner = () => {
               className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem] font-light"
             />
 
-            <button className="w-full py-4 bg-[#ed1616] text-white font-montserrat text-[0.9rem] font-semibold tracking-[0.3px] rounded-full hover:bg-[#d01414] transition">
+            <button type="submit" className="w-full py-4 bg-[#ed1616] text-white font-montserrat text-[0.9rem] font-semibold tracking-[0.3px] rounded-full hover:bg-[#d01414] transition">
               Submit Application
             </button>
           </form>

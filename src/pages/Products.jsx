@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ProductsSection from '../Components/ProductsSection';
 
 // Import fonts
@@ -277,12 +278,12 @@ const Products = () => {
           </p>
 
           <div className="mt-10 flex justify-center gap-6">
-            <button className="px-12 py-4 bg-[#ed1616] text-white rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:bg-[#d01414] transition">
-              Request Quote
-            </button>
-            <button className="px-12 py-4 border border-gray-300 rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:border-[#ed1616] hover:text-[#ed1616] transition">
-              Download Catalog
-            </button>
+            <Link to="/contact" className="px-12 py-4 bg-[#ed1616] text-white rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:bg-[#d01414] transition inline-block">
+              Connect with Us
+            </Link>
+            <Link to="/products" className="px-12 py-4 border border-gray-300 rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:border-[#ed1616] hover:text-[#ed1616] transition inline-block">
+              See Catalog
+            </Link>
           </div>
         </div>
       </section>

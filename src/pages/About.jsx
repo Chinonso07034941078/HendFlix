@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -42,10 +43,10 @@ const About = () => {
                 HendFlix delivers premium lubricants engineered for reliability, longevity, and efficiency.
               </p>
               <div className="pt-6">
-                <button className="px-9 py-3.5 bg-white text-[#c91a1a] font-medium rounded-md hover:bg-gray-50 transition-all duration-300"
+                <Link to="/about" className="px-9 py-3.5 bg-white text-[#c91a1a] font-medium rounded-md hover:bg-gray-50 transition-all duration-300 inline-block"
                         style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '0.9rem', letterSpacing: '0.3px' }}>
                   Learn About Our Mission
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -270,10 +271,10 @@ const About = () => {
             Whether you are a partner, distributor, or industry professional, HendFlix invites you to be part of our story.
           </p>
           <div className="pt-4">
-            <button className="px-10 py-3.5 bg-[#c91a1a] text-white font-medium rounded-md hover:bg-[#b01818] transition-all duration-300"
+            <Link to="/contact" className="px-10 py-3.5 bg-[#c91a1a] text-white font-medium rounded-md hover:bg-[#b01818] transition-all duration-300 inline-block"
                     style={{ fontFamily: 'Montserrat, sans-serif', fontSize: '0.9rem', letterSpacing: '0.3px' }}>
               Contact Us
-            </button>
+            </Link>
           </div>
         </div>
       </section>

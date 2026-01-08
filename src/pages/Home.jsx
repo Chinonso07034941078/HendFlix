@@ -48,9 +48,9 @@ const Home = () => {
               <p className="text-gray-300 leading-relaxed max-w-xl font-normal" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
                 Optimized molecular structures reduce metal-to-metal contact, enabling smoother operation and efficiency gains.
               </p>
-              <div className="mt-8 flex items-center gap-2 text-[#ed1616] font-medium" style={{ fontSize: "0.9rem", fontWeight: "500", letterSpacing: "0.3px" }}>
+              <Link to="/about" className="mt-8 flex items-center gap-2 text-[#ed1616] font-medium" style={{ fontSize: "0.9rem", fontWeight: "500", letterSpacing: "0.3px" }}>
                 Learn More <ArrowRight className="w-4 h-4" />
-              </div>
+              </Link>
             </div>
 
             <div className="col-span-6 md:col-span-5 bg-white border rounded-2xl p-6 md:p-8">
@@ -228,9 +228,9 @@ const Home = () => {
                 Backed by global standards. Discover the formulations trusted worldwide.
               </p>
             </div>
-            <button className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-[#ed1616] hover:shadow-2xl transition-all duration-300 whitespace-nowrap" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+            <Link to="/products" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-[#ed1616] hover:shadow-2xl transition-all duration-300 whitespace-nowrap" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
               Explore Products →
-            </button>
+            </Link>
           </div>
 
         </div>
@@ -333,9 +333,9 @@ const Home = () => {
             <p className="text-gray-600 mb-8 font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
               Each lubricant tested to deliver peak performance.
             </p>
-            <button className="px-16 py-6 bg-black text-white font-semibold rounded-full hover:bg-[#ed1616] hover:shadow-2xl hover:shadow-[#ed1616]/30 transition-all duration-300 transform hover:scale-105" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+            <Link to="/products" className="px-16 py-6 bg-black text-white font-semibold rounded-full hover:bg-[#ed1616] hover:shadow-2xl hover:shadow-[#ed1616]/30 transition-all duration-300 transform hover:scale-105" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
               View Full Catalog
-            </button>
+            </Link>
           </div>
           
         </div>
@@ -425,9 +425,9 @@ const Home = () => {
               </p>
             </div>
             <div className="flex justify-end">
-              <button className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-black hover:shadow-2xl transition-all duration-300" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+              <Link to="/about" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-black hover:shadow-2xl transition-all duration-300" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
                 Discover How →
-              </button>
+              </Link>
             </div>
           </div>
 
@@ -483,12 +483,12 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-5 pt-8">
-                <button className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-black hover:shadow-2xl hover:shadow-[#ed1616]/50 transition-all duration-300 transform hover:scale-105" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+                <Link to="/partner" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-black hover:shadow-2xl hover:shadow-[#ed1616]/50 transition-all duration-300 transform hover:scale-105" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
                   Become a Distributor
-                </button>
-                <button className="px-12 py-5 bg-transparent border-2 border-white/30 font-semibold rounded-full hover:border-[#ed1616] hover:bg-[#ed1616]/10 transition-all duration-300" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+                </Link>
+                <Link to="/contact" className="px-12 py-5 bg-transparent border-2 border-white/30 font-semibold rounded-full hover:border-[#ed1616] hover:bg-[#ed1616]/10 transition-all duration-300" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
                   Contact Sales
-                </button>
+                </Link>
               </div>
             </div>
 

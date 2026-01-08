@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const slides = [
@@ -93,15 +94,21 @@ export default function HomeHero() {
 
                 {/* CTAs - Button Text Style */}
                 <div className="pt-6 flex flex-wrap gap-6">
-                  <button className="px-12 py-4 rounded-full bg-[#ed1616]
-                                     hover:bg-[#d01414] transition font-montserrat text-[0.9rem] font-medium tracking-[0.3px]">
+                  <Link 
+                    to="/products"
+                    className="px-12 py-4 rounded-full bg-[#ed1616]
+                                     hover:bg-[#d01414] transition font-montserrat text-[0.9rem] font-medium tracking-[0.3px] inline-block"
+                  >
                     Explore Products
-                  </button>
-                  <button className="px-12 py-4 rounded-full border border-white/30
+                  </Link>
+                  <Link 
+                    to="/about"
+                    className="px-12 py-4 rounded-full border border-white/30
                                      hover:border-[#ed1616] hover:text-[#ed1616]
-                                     transition font-montserrat text-[0.9rem] font-medium tracking-[0.3px]">
+                                     transition font-montserrat text-[0.9rem] font-medium tracking-[0.3px] inline-block"
+                  >
                     Learn More
-                  </button>
+                  </Link>
                 </div>
 
               </div>
