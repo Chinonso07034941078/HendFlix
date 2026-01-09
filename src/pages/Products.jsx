@@ -327,14 +327,20 @@ const Products = () => {
             Request specifications, pricing, or technical guidance from our team of experts.
           </p>
 
-          <div className="mt-10 flex justify-center gap-6">
-            <Link to="/contact" className="px-12 py-4 bg-[#ed1616] text-white rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:bg-[#d01414] transition inline-block">
-              Contact Hendflix
-            </Link>
-            <Link to="/products" className="px-12 py-4 border border-gray-300 rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:border-[#ed1616] hover:text-[#ed1616] transition inline-block">
-              View Full Catalog
-            </Link>
-          </div>
+<div className="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 px-4">
+  <Link 
+    to="/contact" 
+    className="w-full sm:w-auto px-6 sm:px-12 py-3 sm:py-4 bg-[#ed1616] text-white rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:bg-[#d01414] transition inline-block text-center"
+  >
+    Contact Hendflix
+  </Link>
+  <Link 
+    to="/products" 
+    className="w-full sm:w-auto px-6 sm:px-12 py-3 sm:py-4 border border-gray-300 rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:border-[#ed1616] hover:text-[#ed1616] transition inline-block text-center"
+  >
+    View Full Catalog
+  </Link>
+</div>
         </div>
       </section>
 

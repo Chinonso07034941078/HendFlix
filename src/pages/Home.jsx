@@ -259,46 +259,28 @@ const Home = () => {
           <div className="grid md:grid-cols-12 gap-6 md:gap-8">
 
             {[
-              {
-                name: "Texaco Havoline",
-                type: "Passenger Cars",
-                viscosity: "5W-30, 10W-40",
-                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/lucas-larsson-41M7Xr6cEks-unsplash_absmd9.jpg",
-                span: "md:col-span-5"
-              },
-              {
-                name: "Texaco Ursa",
-                type: "Heavy-Duty",
-                viscosity: "15W-40, 20W-50",
-                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740720/andreas-brun-Rm5_uSGkRmY-unsplash_ohshi3.jpg",
-                span: "md:col-span-7"
-              },
-              {
-                name: "Texaco Meropa",
-                type: "Industrial Gear",
-                viscosity: "ISO VG 220-460",
-                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740705/georg-eiermann-n9j3wbSJzNM-unsplash_nx6ytg.jpg",
-                span: "md:col-span-4"
-              },
+              
+             
+             
               {
                 name: "Texaco HDAX",
                 type: "Hydraulic Systems",
                 viscosity: "ISO VG 32-68",
-                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/robert-laursoo-my6Q5k_WmoI-unsplash_1_dygcq7.jpg",
+                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767972157/photo-1766933181278-16bf0bb27e13_pexks6.avif",
                 span: "md:col-span-4"
               },
               {
                 name: "Texaco Starplex",
                 type: "Multi-Purpose Grease",
                 viscosity: "NLGI 1-2",
-                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740710/jan-kopriva-AVlOmTRe9mY-unsplash_fslqvv.jpg",
+                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767972203/photo-1746014995879-4176a09069e7_ypinqb.avif",
                 span: "md:col-span-4"
               },
               {
                 name: "Texaco Delo",
                 type: "Diesel Engines",
                 viscosity: "15W-40",
-                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740719/setengah-limasore-jlbbm_IerPE-unsplash_bgzbyc.jpg",
+                image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767785591/q14_d9tmfm.jpg",
                 span: "md:col-span-6"
               },
             ].map((product, i) => (
