@@ -15,53 +15,56 @@ import {
 
 const tiers = [
   {
-    level: 'Silver',
-    title: 'Authorized Distributor',
+    level: '',
+    title: 'Authorized Retailer',
     highlight: false,
-    desc: 'Regional distribution partners expanding their lubricant portfolio.',
+    desc: 'Local retailers and workshops expanding their lubricant portfolio with Texaco products.',
     perks: [
       'Territorial authorization',
       'Standard wholesale pricing',
       'Marketing starter kit',
-      'Technical support access'
+      'Technical support access',
+      'Product training sessions'
     ],
-    req: ['Min. $10,000 / month', 'Storage capability', 'Sales team']
+    req: [ 'Storage capability', 'Sales team']
   },
   {
-    level: 'Gold',
-    title: 'Premium Partner',
+    level: '',
+    title: 'Premium Distributor',
     highlight: true,
-    desc: 'Established distributors scaling aggressively.',
+    desc: 'Established distributors scaling aggressively across Nigerian regions.',
     perks: [
       '15% preferred pricing',
       'Dedicated account manager',
       'Co-branded campaigns',
-      'Priority inventory'
+      'Priority inventory',
+      'Exclusive territory rights'
     ],
-    req: ['Min. $25,000 / month', 'Multi-location ops', '3+ years experience']
+    req: [ 'Multi-location ops', 'team experience']
   },
   {
-    level: 'Platinum',
+    level: '',
     title: 'Strategic Alliance',
     highlight: false,
-    desc: 'National leaders and enterprise distributors.',
+    desc: 'National leaders and enterprise distributors with nationwide reach.',
     perks: [
       '20% premium pricing',
       'Custom product programs',
-      'Executive planning',
-      'Global distribution rights'
+      'Executive planning sessions',
+      'National distribution rights',
+      'First access to new products'
     ],
-    req: ['Min. $100,000 / month', 'National reach', 'Proven scale']
+    req: [ 'National reach', 'Proven scale']
   }
 ]
 
 const benefits = [
-  { icon: DollarSign, title: 'High Margins', text: 'Volume-based incentives and sustainable profit structures.' },
-  { icon: Package, title: 'Certified Products', text: 'Globally tested lubricants built for endurance.' },
-  { icon: Headphones, title: 'Direct Support', text: 'Technical access when it matters most.' },
-  { icon: TrendingUp, title: 'Market Growth', text: 'Brand leverage that opens doors.' },
-  { icon: Award, title: 'Brand Authority', text: 'Partner with an industry-grade name.' },
-  { icon: Users, title: 'Long-Term Alliance', text: 'We grow with our partners, not around them.' }
+  { icon: Package, title: 'Original Texaco Products', text: 'Guaranteed authentic, premium-grade engine oils that meet global standards.' },
+  { icon: TrendingUp, title: 'Growing Market', text: 'Tap into Nigeria\'s expanding automotive and industrial sectors.' },
+  { icon: DollarSign, title: 'Competitive Margins', text: 'Volume-based incentives and sustainable profit structures.' },
+  { icon: Award, title: 'Brand Authority', text: 'Partner with a trusted Texaco supplier recognized for quality.' },
+  { icon: Headphones, title: 'Technical Support', text: 'Expert guidance to help customers choose the right oil for their engines.' },
+  { icon: Users, title: 'Long-Term Alliance', text: 'We grow with our partners based on TRICE values: Teamwork, Respect, Integrity, Commitment, Excellence.' }
 ]
 
 const Partner = () => {
@@ -71,6 +74,8 @@ const Partner = () => {
     email: '',
     phone: '',
     location: '',
+    businessType: '',
+    currentBrands: '',
     message: ''
   })
 
@@ -87,16 +92,18 @@ Company: ${data.company}
 Email: ${data.email}
 Phone: ${data.phone}
 Location: ${data.location}
+Business Type: ${data.businessType}
+Current Brands: ${data.currentBrands}
 
 Message:
  ${data.message}
 
 ---
-This is a partnership application from the HendFlix website.
+This is a partnership application from the HendFlix Limited website.
     `.trim()
     
     // Create mailto link
-    const mailtoLink = `mailto:Hendflixx@gmail.com?subject=Partnership Application from ${data.name} - ${data.company}&body=${encodeURIComponent(emailBody)}`
+    const mailtoLink = `mailto:info@hendflix.com?subject=Partnership Application from ${data.name} - ${data.company}&body=${encodeURIComponent(emailBody)}`
     
     // Open email client
     window.location.href = mailtoLink
@@ -124,17 +131,17 @@ This is a partnership application from the HendFlix website.
 
         <div className="relative max-w-7xl mx-auto px-6">
           <span className="inline-block mb-8 px-6 py-2 font-montserrat text-[0.7rem] tracking-tight uppercase border border-[#ed1616]/40 rounded-full text-[#ed1616] font-semibold">
-            Partnership Program
+            Texaco Partnership Program
           </span>
 
           <h1 className="font-coolvetica text-[4rem] leading-[1.1] max-w-4xl">
-            Build Distribution Power<br />
-            <span className="text-white/50">With HendFlix</span>
+            Become a HendFlix<br />
+            <span className="text-white/50">Texaco Distributor</span>
           </h1>
 
           <p className="mt-8 font-montserrat text-[1.3rem] font-light text-white/70 max-w-3xl">
-            We don't chase partners. We select them. HendFlix partnerships are
-            designed for businesses serious about scale, quality, and authority.
+            Join Nigeria's trusted Texaco engine oil supplier. HendFlix Limited partnerships are
+            designed for businesses serious about quality, integrity, and growth.
           </p>
         </div>
       </section>
@@ -160,8 +167,31 @@ This is a partnership application from the HendFlix website.
         </div>
       </section>
 
-      {/* ================= TIERS ================= */}
+      {/* ================= WHO WE SERVE ================= */}
       <section className="py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-coolvetica text-[4rem] mb-16">Who We Serve Together</h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: 'Private Car Owners', desc: 'Quality-conscious vehicle owners seeking reliable engine protection' },
+              { title: 'Commercial Drivers', desc: 'Professional drivers who depend on engine reliability for daily operations' },
+              { title: 'Transport Companies', desc: 'Fleet operators managing multiple vehicles across Nigeria' },
+              { title: 'Service Centers', desc: 'Workshops and service centers providing professional maintenance' },
+              { title: 'Industrial Users', desc: 'Businesses using generators and heavy machinery' },
+              { title: 'Agricultural Sector', desc: 'Farms and agricultural operations with equipment needs' }
+            ].map((customer, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#ed1616] transition-all duration-300">
+                <h3 className="font-coolvetica text-[1.125rem] mb-3">{customer.title}</h3>
+                <p className="font-montserrat text-[0.95rem] font-light text-gray-600">{customer.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= TIERS ================= */}
+      <section className="py-32">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-coolvetica text-[4rem] mb-20">Partnership Levels</h2>
 
@@ -183,14 +213,14 @@ This is a partnership application from the HendFlix website.
                   {t.desc}
                 </p>
 
-                <ul className="mt-8 space-y-3">
+                {/* <ul className="mt-8 space-y-3">
                   {t.perks.map((p, idx) => (
                     <li key={idx} className="flex gap-3">
                       <CheckCircle className={`${t.highlight ? 'text-white' : 'text-[#ed1616]'}`} />
                       <span className="font-montserrat text-[0.95rem] font-light">{p}</span>
                     </li>
                   ))}
-                </ul>
+                </ul> */}
 
                 <div className="mt-10 pt-6 border-t border-white/20">
                   {t.req.map((r, idx) => (
@@ -204,27 +234,76 @@ This is a partnership application from the HendFlix website.
       </section>
 
       {/* ================= APPLICATION ================= */}
-      <section className="py-32">
+      <section className="py-32 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="font-coolvetica text-[4rem] mb-12">
             Apply for Partnership
           </h2>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
-            {['name', 'company', 'email', 'phone', 'location'].map((f) => (
+            <div className="grid md:grid-cols-2 gap-6">
               <input
-                key={f}
-                name={f}
-                placeholder={f.charAt(0).toUpperCase() + f.slice(1)}
+                name="name"
+                placeholder="Full Name"
                 onChange={onChange}
                 className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem]"
               />
-            ))}
+              <input
+                name="company"
+                placeholder="Company Name"
+                onChange={onChange}
+                className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem]"
+              />
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              <input
+                name="email"
+                type="email"
+                placeholder="Email Address"
+                onChange={onChange}
+                className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem]"
+              />
+              <input
+                name="phone"
+                placeholder="Phone Number"
+                onChange={onChange}
+                className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem]"
+              />
+            </div>
+
+            <input
+              name="location"
+              placeholder="Business Location (City, State)"
+              onChange={onChange}
+              className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem]"
+            />
+
+            <select
+              name="businessType"
+              onChange={onChange}
+              className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem]"
+            >
+              <option value="">Select Business Type</option>
+              <option value="retail">Retail Shop</option>
+              <option value="workshop">Service Workshop</option>
+              <option value="distributor">Distributor</option>
+              <option value="fleet">Fleet Operator</option>
+              <option value="industrial">Industrial User</option>
+              <option value="other">Other</option>
+            </select>
+
+            <input
+              name="currentBrands"
+              placeholder="Current Brands You Carry (if any)"
+              onChange={onChange}
+              className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem]"
+            />
 
             <textarea
               name="message"
               rows={6}
-              placeholder="Tell us about your business and ambitions…"
+              placeholder="Tell us about your business and why you want to partner with HendFlix Limited..."
               onChange={onChange}
               className="w-full px-5 py-4 border border-gray-300 rounded-xl focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none font-montserrat text-[0.95rem] font-light"
             />
@@ -238,18 +317,27 @@ This is a partnership application from the HendFlix website.
 
       {/* ================= CONTACT STRIP ================= */}
       <section className="bg-black text-white py-24">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-10 text-center">
-          <div>
-            <Phone className="mx-auto mb-4 text-[#ed1616]" />
-            <p className="font-montserrat text-[0.95rem] font-light">+1 (234) 567-890</p>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h3 className="font-coolvetica text-[2.5rem] mb-4">Ready to Partner with HendFlix?</h3>
+            <p className="font-montserrat text-[1.125rem] font-light text-white/70 max-w-3xl mx-auto">
+              Join our network of trusted Texaco distributors across Nigeria. Together, we'll deliver quality engine oils that protect engines and improve performance.
+            </p>
           </div>
-          <div>
-            <Mail className="mx-auto mb-4 text-[#ed1616]" />
-            <p className="font-montserrat text-[0.95rem] font-light">partners@hendflix.com</p>
-          </div>
-          <div>
-            <MapPin className="mx-auto mb-4 text-[#ed1616]" />
-            <p className="font-montserrat text-[0.95rem] font-light">Houston, Texas</p>
+          
+          <div className="grid md:grid-cols-3 gap-10 text-center">
+            <div>
+              <Phone className="mx-auto mb-4 text-[#ed1616]" />
+              <p className="font-montserrat text-[0.95rem] font-light">+234 816 500 9559</p>
+            </div>
+            <div>
+              <Mail className="mx-auto mb-4 text-[#ed1616]" />
+              <p className="font-montserrat text-[0.95rem] font-light">Hendflixx@gmail.com</p>
+            </div>
+            <div>
+              <MapPin className="mx-auto mb-4 text-[#ed1616]" />
+              <p className="font-montserrat text-[0.95rem] font-light">Lagos, Nigeria</p>
+            </div>
           </div>
         </div>
       </section>

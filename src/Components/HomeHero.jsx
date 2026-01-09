@@ -4,36 +4,36 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const slides = [
   {
-    title: "Engineered Lubricants",
-    subtitle: "Precision Meets Power",
+    title: "Texaco Products",
+    subtitle: "Trusted Engine Protection",
     description:
-      "High-performance lubricants designed to protect engines, reduce friction, and extend operational life — even under extreme conditions.",
+      "Hendflix Limited supplies authentic, premium-grade Texaco engine oils that keep engines running smoothly, efficiently, and reliably across Nigeria.",
     image:
-      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740729/garett-mizunaka-xFjti9rYILo-unsplash_rbtvoe.jpg",
+      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767959817/istockphoto-1325588832-612x612_ajw88o.webp  ",
   },
   {
-    title: "Built for Heat & Pressure",
-    subtitle: "Tested Beyond Limits",
+    title: "Quality You Can Trust",
+    subtitle: "Engineered for Nigerian Conditions",
     description:
-      "Formulations proven under high temperatures and intense mechanical stress for uncompromising reliability.",
+      "Our carefully sourced Texaco products meet global standards and are designed to reduce engine wear, improve fuel efficiency, and extend engine lifespan.",
     image:
-      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740720/andreas-brun-Rm5_uSGkRmY-unsplash_ohshi3.jpg",
+      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767968286/istockphoto-153517859-612x612_i7pjvb.jpg",
   },
   {
-    title: "For Every Engine",
-    subtitle: "Automotive • Industrial • Power Systems",
+    title: "Serving All of Nigeria",
+    subtitle: "Private • Commercial • Industrial",
     description:
-      "From personal vehicles to heavy-duty machinery, HendFlix lubricants deliver consistent performance across industries.",
+      "From individual car owners to transport companies and industrial users, Hendflix delivers the right Texaco solution for every need.",
     image:
-      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740719/eduardo-buscariolli-L-4mbXwL9yg-unsplash_boe2wz.jpg",
+      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767959599/premium_photo-1753364509609-7f59aac350d1_xtgd4j.avif",
   },
   {
-    title: "Protection You Can Trust",
-    subtitle: "Driven by Engineering",
+    title: "Our Values Define Us",
+    subtitle: "Teamwork • Respect • Integrity • Commitment • Excellence",
     description:
-      "Trusted by professionals for smoother performance, reduced wear, and long-term engine protection.",
+      "Founded by Henry Emeh, Hendflix operates with core values that guide everything we do, ensuring customer trust and long-term value.",
     image:
-      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740710/jan-kopriva-AVlOmTRe9mY-unsplash_fslqvv.jpg",
+      "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767968223/premium_photo-1740995763081-e699269bde34_hwute3.avif",
   },
 ]
 
@@ -43,7 +43,7 @@ export default function HomeHero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((i) => (i + 1) % slides.length)
-    }, 6500)
+    }, 9500)
     return () => clearInterval(interval)
   }, [])
 
@@ -76,30 +76,36 @@ export default function HomeHero() {
             <div className="max-w-7xl mx-auto px-6 w-full">
               <div className="max-w-3xl space-y-8">
 
-                {/* Eyebrow - Section Label Style */}
-                <span className="inline-block px-5 py-2 border border-[#ed1616]/60 rounded-full
-                                 font-montserrat text-[0.7rem] tracking-tight uppercase text-[#ed1616] font-semibold">
-                  {slide.subtitle}
-                </span>
+                {/* Eyebrow - Section Label Style with fixed height */}
+                <div className="h-[28px] flex items-center">
+                  <span className="inline-block px-5 py-2 border border-[#ed1616]/60 rounded-full
+                                   font-montserrat text-[0.7rem] tracking-tight uppercase text-[#ed1616] font-semibold">
+                    {slide.subtitle}
+                  </span>
+                </div>
 
-                {/* Heading - Hero H1 Style */}
-                <h1 className="font-coolvetica text-[3.5rem] md:text-[4.5rem] leading-[1.1]">
-                  {slide.title}
-                </h1>
+                {/* Heading - Hero H1 Style with fixed height */}
+                <div className="h-[110px] md:h-[140px]">
+                  <h1 className="font-coolvetica text-[3.5rem] md:text-[4.5rem] leading-[1.1]">
+                    {slide.title}
+                  </h1>
+                </div>
 
-                {/* Body - Paragraph Style */}
-                <p className="font-montserrat text-[1rem] md:text-[1.125rem] font-light text-white/75 max-w-2xl">
-                  {slide.description}
-                </p>
+                {/* Body - Paragraph Style with fixed height */}
+                <div className="h-[60px] md:h-[70px]">
+                  <p className="font-montserrat text-[1rem] md:text-[1.125rem] font-light text-white/75 max-w-2xl">
+                    {slide.description}
+                  </p>
+                </div>
 
-                {/* CTAs - Button Text Style */}
-                <div className="pt-6 flex flex-wrap gap-6">
+                {/* CTAs - Button Text Style with fixed height */}
+                <div className="h-[60px] pt-6 flex flex-wrap gap-6">
                   <Link 
                     to="/products"
                     className="px-12 py-4 rounded-full bg-[#ed1616]
                                      hover:bg-[#d01414] transition font-montserrat text-[0.9rem] font-medium tracking-[0.3px] inline-block"
                   >
-                    Explore Products
+                    View Texaco Products
                   </Link>
                   <Link 
                     to="/about"
@@ -107,7 +113,7 @@ export default function HomeHero() {
                                      hover:border-[#ed1616] hover:text-[#ed1616]
                                      transition font-montserrat text-[0.9rem] font-medium tracking-[0.3px] inline-block"
                   >
-                    Learn More
+                    About Hendflix
                   </Link>
                 </div>
 

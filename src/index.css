@@ -22,3 +22,17 @@
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
 }
+
+/* In your global CSS file */
+.font-coolvetica {
+  font-family: 'Coolvetica', sans-serif;
+}
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
+.font-light {
+  font-weight: 300;
+}
+.font-semibold {
+  font-weight: 600;
+}

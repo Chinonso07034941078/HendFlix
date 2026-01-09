@@ -3,20 +3,20 @@ import React, { useState, useEffect } from 'react'
 const fallbackImage = 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785660/q5_nqqjnv.jpg';
 
 const products = [
-  { id: 1, name: 'Engine Max 5W-30', type: 'Engine Oil', category: 'Automotive', specs: ['API SN', 'ACEA A3/B4', 'Full Synthetic'], temp: '-40°C → 150°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785660/q5_nqqjnv.jpg' },
-  { id: 2, name: 'Hydraulic Ultra', type: 'Hydraulic Oil', category: 'Industrial', specs: ['ISO VG 46', 'DIN 51524', 'Anti-Wear'], temp: '-20°C → 120°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785659/q10_hydr.jpg' },
-  { id: 3, name: 'GearPro 80W-90', type: 'Gear Oil', category: 'Automotive', specs: ['API GL-5', 'EP Additives'], temp: '-30°C → 140°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785658/q2_s8c7dz.jpg' },
-  { id: 4, name: 'Industrial Max Lube', type: 'Industrial Oil', category: 'Industrial', specs: ['ISO VG 220', 'Extreme Pressure'], temp: '-15°C → 130°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785657/q11_indus.jpg' },
-  { id: 5, name: 'Synthetic Engine Oil', type: 'Engine Oil', category: 'Automotive', specs: ['Low SAPS', 'Extended Drain'], temp: '-45°C → 160°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785648/q3_qlbzqa.jpg' },
-  { id: 6, name: 'Turbo Gear Lube', type: 'Gear Oil', category: 'Heavy-Duty', specs: ['API GL-4', 'High EP'], temp: '-35°C → 150°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785639/q6_wbuege.jpg' },
-  { id: 7, name: 'Marine Grade Oil', type: 'Marine Oil', category: 'Marine', specs: ['NMMA FC-W', 'Corrosion Protection'], temp: '-10°C → 120°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785640/q9_marine.jpg' },
-  { id: 8, name: 'Agricultural Fluid', type: 'Agricultural Oil', category: 'Agricultural', specs: ['UTTO', 'Wet Brake'], temp: '-25°C → 130°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785641/q5_agri.jpg' },
-  { id: 9, name: 'Eco Synthetic Oil', type: 'Engine Oil', category: 'Automotive', specs: ['Low SAPS', 'Fuel Efficient'], temp: '-40°C → 150°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785638/q1_euygbn.jpg' },
-  { id: 10, name: 'Precision Gear Lube', type: 'Gear Oil', category: 'Industrial', specs: ['ISO VG 150', 'Anti-Wear'], temp: '-15°C → 140°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785603/q4_hiwcfv.jpg' },
-  { id: 11, name: 'Max Turbo Oil', type: 'Engine Oil', category: 'Automotive', specs: ['API SN', 'Turbo Additives'], temp: '-30°C → 160°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785599/q8_lncjjv.jpg' },
-  { id: 12, name: 'Heavy Duty Hydraulic', type: 'Hydraulic Oil', category: 'Industrial', specs: ['ISO VG 68', 'High Pressure'], temp: '-20°C → 120°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785598/q13_hydr.jpg' },
-  { id: 13, name: 'Racing Synthetic Oil', type: 'Engine Oil', category: 'Automotive', specs: ['API SN', 'Racing Additives'], temp: '-35°C → 170°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785599/q7_nv3acs.jpg' },
-  { id: 14, name: 'Precision Engine Oil', type: 'Engine Oil', category: 'Automotive', specs: ['API SN', 'Extended Drain'], temp: '-45°C → 160°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785599/q12_dhk65v.jpg' }
+  { id: 1, name: 'Texaco Havoline 5W-30', type: 'Engine Oil', category: 'Automotive', specs: ['API SP', 'ACEA C5', 'Full Synthetic'], temp: '-40°C → 150°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785660/q5_nqqjnv.jpg' },
+  { id: 2, name: 'Texaco HDAX 46', type: 'Hydraulic Oil', category: 'Industrial', specs: ['ISO VG 46', 'DIN 51524', 'Anti-Wear'], temp: '-20°C → 120°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785659/q10_hydr.jpg' },
+  { id: 3, name: 'Texaco Meropa 220', type: 'Gear Oil', category: 'Industrial', specs: ['ISO VG 220', 'DIN 51517', 'EP Additives'], temp: '-30°C → 140°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785658/q2_s8c7dz.jpg' },
+  { id: 4, name: 'Texaco HDAX 320', type: 'Industrial Oil', category: 'Industrial', specs: ['ISO VG 320', 'Extreme Pressure'], temp: '-15°C → 130°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785657/q11_indus.jpg' },
+  { id: 5, name: 'Texaco Havoline 10W-40', type: 'Engine Oil', category: 'Automotive', specs: ['API SN', 'ACEA A3/B4', 'Semi-Synthetic'], temp: '-30°C → 130°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785648/q3_qlbzqa.jpg' },
+  { id: 6, name: 'Texaco Ursa 15W-40', type: 'Engine Oil', category: 'Heavy-Duty', specs: ['API CK-4', 'ACEA E9', 'Low SAPS'], temp: '-15°C → 130°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785639/q6_wbuege.jpg' },
+  { id: 7, name: 'Texaco Delo 400 SDE', type: 'Engine Oil', category: 'Heavy-Duty', specs: ['API CJ-4', 'ACEA E7', 'Extended Drain'], temp: '-25°C → 130°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785640/q9_marine.jpg' },
+  { id: 8, name: 'Texaco Starplex EP2', type: 'Grease', category: 'Industrial', specs: ['NLGI 2', 'EP Additives', 'Water Resistant'], temp: '-30°C → 140°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785641/q5_agri.jpg' },
+  { id: 9, name: 'Texaco Havoline 0W-20', type: 'Engine Oil', category: 'Automotive', specs: ['API SP', 'ACEA C2', 'Fuel Efficient'], temp: '-40°C → 120°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785638/q1_euygbn.jpg' },
+  { id: 10, name: 'Texaco Meropa 150', type: 'Gear Oil', category: 'Industrial', specs: ['ISO VG 150', 'Anti-Wear'], temp: '-15°C → 140°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785603/q4_hiwcfv.jpg' },
+  { id: 11, name: 'Texaco Ursa 20W-50', type: 'Engine Oil', category: 'Heavy-Duty', specs: ['API CI-4', 'High TBN', 'Mineral Base'], temp: '-20°C → 140°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785599/q8_lncjjv.jpg' },
+  { id: 12, name: 'Texaco HDAX 68', type: 'Hydraulic Oil', category: 'Industrial', specs: ['ISO VG 68', 'Anti-Wear', 'Anti-Foam'], temp: '-20°C → 120°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785598/q13_hydr.jpg' },
+  { id: 13, name: 'Texaco Delo 400 XSP', type: 'Engine Oil', category: 'Heavy-Duty', specs: ['API FA-4', 'Low SAPS', 'Fuel Efficient'], temp: '-35°C → 150°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785599/q7_nv3acs.jpg' },
+  { id: 14, name: 'Texaco Havoline 5W-40', type: 'Engine Oil', category: 'Automotive', specs: ['API SP', 'ACEA A3/B4', 'Full Synthetic'], temp: '-35°C → 150°C', image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/f_auto,q_auto/v1767785599/q12_dhk65v.jpg' }
 ];
 
 // fallback function if image fails
@@ -52,27 +52,44 @@ const ProductCard = ({ product, onClick, className = '', idx = 0 }) => (
   </div>
 );
 
+
 const TypewriterText = () => {
-  const text = "Every lubricant is precision-engineered. Every formulation is tested under extreme conditions. Every product is designed to protect what matters most — your equipment, your investment, your operation.";
-  const [display, setDisplay] = useState('');
+  const text = "At Hendflix Limited, we supply original, premium-grade Texaco products that keep engines running smoothly, efficiently, and reliably. Every product is carefully sourced to ensure authenticity, quality, and consistency. We're committed to protecting engines, improving performance, and helping our customers reduce maintenance costs while driving with confidence.";
+
+  const [display, setDisplay] = useState("");
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
+    let timer;
+
     if (index < text.length) {
-      const timer = setTimeout(() => { setDisplay(prev => prev + text[index]); setIndex(prev => prev + 1); }, 30);
-      return () => clearTimeout(timer);
+      timer = setTimeout(() => {
+        setDisplay((prev) => prev + text[index]);
+        setIndex((prev) => prev + 1);
+      }, 30);
+    } else {
+      timer = setTimeout(() => {
+        setDisplay("");
+        setIndex(0);
+      }, 5000);
     }
-  }, [index]);
+
+    return () => clearTimeout(timer);
+  }, [index, text]);
 
   return (
-    <p className="paragraph text-gray-600 leading-relaxed max-w-4xl">
-      {display}{index < text.length && <span className="inline-block w-0.5 h-5 bg-[#ed1616] ml-1 animate-pulse" />}
+    <p className="paragraph text-gray-600 leading-relaxed max-w-4xl min-h-[120px] relative">
+      {display}
+      {index < text.length && (
+        <span className="absolute w-0.5 h-5 bg-[#ed1616] ml-1 animate-pulse" />
+      )}
     </p>
   );
 };
 
+
 const PurchaseModal = ({ product, onClose }) => {
-  const whatsappUrl = `https://wa.me/2348165009559?text=Hi, I'm interested in purchasing ${encodeURIComponent(product.name)}`;
+  const whatsappUrl = `https://wa.me/+234 8165009559?text=Hi, I'm interested in purchasing ${encodeURIComponent(product.name)} from Hendflix Limited`;
   
   return (
     <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-end sm:items-center justify-center p-4 animate-fade-in" onClick={onClose}>
@@ -165,10 +182,10 @@ const ProductsSection = () => {
           <div className="space-y-4 sm:space-y-6">
             <div className="flex items-center gap-3">
               <div className="h-px w-12 sm:w-16 bg-[#ed1616]" />
-              <span className="section-label text-[#ed1616]">Our Products</span>
+              <span className="section-label text-[#ed1616]">Texaco Products</span>
             </div>
             <h2 className="hero-h1 text-black leading-tight">
-              Engineered for<span className="hero-subheading block text-gray-400 mt-2">Performance</span>
+              Premium Engine Oils<span className="hero-subheading block text-gray-400 mt-2">From HendFlix Limited</span>
             </h2>
           </div>
           <TypewriterText />
@@ -255,7 +272,7 @@ const ProductsSection = () => {
 
           <div className="mt-8 sm:mt-12 flex items-center gap-4 sm:gap-6">
             <div className="h-px flex-1 bg-gray-200" />
-            <span className="section-label text-gray-400">Premium Lubricants</span>
+            <span className="section-label text-gray-400">Texaco Products</span>
             <div className="h-px flex-1 bg-gray-200" />
           </div>
         </div>

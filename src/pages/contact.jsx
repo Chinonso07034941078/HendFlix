@@ -1,9 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    company: '',
+    message: ''
+  })
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    
+    // Create email body with form data
+    const emailBody = `
+Full Name: ${formData.fullName}
+Email: ${formData.email}
+Company: ${formData.company}
+
+Message:
+ ${formData.message}
+
+---
+This is a contact inquiry from the HendFlix website.
+    `.trim()
+    
+    // Create mailto link
+    const mailtoLink = `mailto:info@hendflix.com?subject=Contact Inquiry from ${formData.fullName}&body=${encodeURIComponent(emailBody)}`
+    
+    // Open email client
+    window.location.href = mailtoLink
+  }
+
   return (
-    <div className="bg-white text-black font-montserrat">
+    <div className="bg-white text-black" style={{ fontFamily: "'Montserrat', sans-serif" }}>
 
       {/* =========================
           HERO
@@ -16,15 +53,15 @@ const Contact = () => {
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 text-center space-y-8">
-          <span className="inline-block px-6 py-2 text-[0.7rem] tracking-[0.3em] uppercase font-semibold bg-[#ed1616]/10 border border-[#ed1616]/20 rounded-full">
+          <span className="inline-block px-6 py-2 uppercase tracking-tight font-semibold bg-[#ed1616]/10 border border-[#ed1616]/20 rounded-full" style={{ fontSize: "0.625rem", fontWeight: "600" }}>
             Get In Touch
           </span>
-          <h1 className="text-[4rem] font-coolvetica leading-[1.1]">
+          <h1 className="leading-[1.1]" style={{ fontSize: "clamp(3.5rem, 5vw, 4.5rem)", fontFamily: "'Coolvetica', sans-serif" }}>
             Let's Talk Performance
           </h1>
-          <p className="text-[1.3rem] font-light text-white/80 max-w-3xl mx-auto leading-relaxed">
-            Whether you're an industrial partner, distributor, or automotive professional,
-            our team is ready to support your performance goals.
+          <p className="font-light text-white/80 max-w-3xl mx-auto leading-relaxed" style={{ fontSize: "1.3rem", fontWeight: "300" }}>
+            Whether you're an individual vehicle owner, commercial driver, fleet operator, or workshop,
+            our team is ready to support your engine oil needs.
           </p>
         </div>
       </section>
@@ -37,12 +74,12 @@ const Contact = () => {
         {/* CONTACT INFO */}
         <div className="lg:col-span-5 space-y-10">
           <div>
-            <h2 className="text-[1.125rem] font-coolvetica mb-4">
-              HendFlix Headquarters
+            <h2 className="mb-4" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
+              HendFlix Limited
             </h2>
-            <p className="text-[1rem] font-light text-gray-600 leading-relaxed max-w-md">
-              Reach out to our team for technical support, partnerships,
-              distribution opportunities, or product inquiries.
+            <p className="font-light text-gray-600 leading-relaxed max-w-md" style={{ fontSize: "1rem", fontWeight: "300" }}>
+              HendFlix Limited is a trusted engine oil and lubricants supply company committed to delivering 
+              high-quality products that keep engines running smoothly, efficiently, and reliably.
             </p>
           </div>
 
@@ -53,8 +90,8 @@ const Contact = () => {
                 <Phone className="w-5 h-5 text-[#ed1616]" />
               </div>
               <div>
-                <h4 className="font-semibold text-[1rem]">Phone</h4>
-                <p className="text-gray-600 text-[0.875rem] font-light">+1 (234) 567-890</p>
+                <h4 className="font-semibold" style={{ fontSize: "1rem" }}>Phone</h4>
+                <p className="text-gray-600 font-light" style={{ fontSize: "0.875rem", fontWeight: "300" }}>+234 816 500 9559</p>
               </div>
             </div>
 
@@ -64,8 +101,8 @@ const Contact = () => {
                 <Mail className="w-5 h-5 text-[#ed1616]" />
               </div>
               <div>
-                <h4 className="font-semibold text-[1rem]">Email</h4>
-                <p className="text-gray-600 text-[0.875rem] font-light">info@hendflix.com</p>
+                <h4 className="font-semibold" style={{ fontSize: "1rem" }}>Email</h4>
+                <p className="text-gray-600 font-light" style={{ fontSize: "0.875rem", fontWeight: "300" }}>info@hendflix.com</p>
               </div>
             </div>
 
@@ -75,10 +112,10 @@ const Contact = () => {
                 <MapPin className="w-5 h-5 text-[#ed1616]" />
               </div>
               <div>
-                <h4 className="font-semibold text-[1rem]">Location</h4>
-                <p className="text-gray-600 text-[0.875rem] font-light leading-relaxed">
-                  123 Industrial Blvd, Suite 100<br />
-                  Houston, TX 77001, USA
+                <h4 className="font-semibold" style={{ fontSize: "1rem" }}>Location</h4>
+                <p className="text-gray-600 font-light leading-relaxed" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
+                  Houston, Texas<br />
+                  Nigeria Operations Nationwide
                 </p>
               </div>
             </div>
@@ -86,9 +123,9 @@ const Contact = () => {
 
           {/* Brand Statement */}
           <div className="pt-10 border-t border-gray-200">
-            <p className="text-gray-700 font-medium text-[1rem] leading-relaxed">
-              HendFlix lubricants are engineered for industries where
-              reliability is not optional — it's critical.
+            <p className="text-gray-700 font-medium leading-relaxed" style={{ fontSize: "1rem" }}>
+              We specialize in the supply and distribution of Texaco motor oil, serving individual vehicle owners, 
+              commercial drivers, fleet operators, workshops, and businesses across Nigeria.
             </p>
           </div>
         </div>
@@ -97,39 +134,56 @@ const Contact = () => {
         <div className="lg:col-span-7">
           <div className="bg-gray-50 rounded-3xl shadow-xl p-10 lg:p-14">
 
-            <h3 className="text-[1.125rem] font-coolvetica mb-8">
+            <h3 className="mb-8" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
               Send Us a Message
             </h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid md:grid-cols-2 gap-6">
                 <input
                   type="text"
+                  name="fullName"
                   placeholder="Full Name"
-                  className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition text-[1rem]"
+                  value={formData.fullName}
+                  onChange={handleChange}
+                  className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition"
+                  style={{ fontSize: "1rem" }}
                 />
                 <input
                   type="email"
+                  name="email"
                   placeholder="Email Address"
-                  className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition text-[1rem]"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition"
+                  style={{ fontSize: "1rem" }}
                 />
               </div>
 
               <input
                 type="text"
+                name="company"
                 placeholder="Company (Optional)"
-                className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition text-[1rem]"
+                value={formData.company}
+                onChange={handleChange}
+                className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition"
+                style={{ fontSize: "1rem" }}
               />
 
               <textarea
+                name="message"
                 rows="6"
                 placeholder="Tell us about your needs..."
-                className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition resize-none text-[1rem]"
+                value={formData.message}
+                onChange={handleChange}
+                className="w-full px-5 py-4 rounded-xl border border-gray-300 focus:border-[#ed1616] focus:ring-2 focus:ring-[#ed1616]/20 outline-none transition resize-none"
+                style={{ fontSize: "1rem" }}
               />
 
               <button
                 type="submit"
-                className="inline-flex items-center gap-3 px-10 py-4 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-[#d01414] hover:shadow-xl hover:shadow-[#ed1616]/20 transition-all text-[0.9rem] tracking-[0.3px]"
+                className="inline-flex items-center gap-3 px-10 py-4 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-[#d01414] hover:shadow-xl hover:shadow-[#ed1616]/20 transition-all"
+                style={{ fontSize: "0.9rem", fontWeight: "500", letterSpacing: "0.3px" }}
               >
                 Send Message
                 <Send className="w-4 h-4" />
@@ -140,22 +194,49 @@ const Contact = () => {
       </section>
 
       {/* =========================
-          MAP / VISUAL FOOTER
+          WHO WE SERVE
       ========================= */}
-      <section className="relative bg-black text-white py-32 overflow-hidden">
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[2px] bg-gradient-to-r from-transparent via-[#ed1616]/40 to-transparent" />
-        </div>
-
-        <div className="relative max-w-4xl mx-auto text-center px-6 space-y-6">
-          <h2 className="text-[1.125rem] font-coolvetica">
-            Precision Starts With a Conversation
-          </h2>
-          <p className="text-white/80 text-[1.3rem] font-light">
-            Let's engineer the right solution for your engines and machinery.
+    <section className="bg-gray-50 py-20">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="mb-10 text-center" style={{ fontSize: "2rem", fontFamily: "'Coolvetica', sans-serif" }}>Who We Serve</h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        'Private car owners',
+        'Commercial and professional drivers',
+        'Transport and logistics companies',
+        'Workshops and service centers',
+        'Businesses using generators and machinery'
+      ].map((item, i) => (
+        <div key={i} className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-500">
+          <h3 className="mb-2" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
+            {item}
+          </h3>
+          <p className="text-gray-600" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
+            Quality Texaco motor oils and lubricants tailored for your specific needs.
           </p>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* =========================
+    MAP / VISUAL FOOTER
+========================= */}
+<section className="relative bg-black text-white py-32 overflow-hidden">
+  <div className="absolute inset-0">
+    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[2px] bg-gradient-to-r from-transparent via-[#ed1616]/40 to-transparent" />
+  </div>
+
+  <div className="relative max-w-4xl mx-auto text-center px-6 space-y-6">
+    <h2 style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
+      Quality Starts With a Conversation
+    </h2>
+    <p className="text-white/80 font-light" style={{ fontSize: "1.3rem", fontWeight: "300" }}>
+      Let's find the right engine oil solution for your vehicles and machinery.
+    </p>
+  </div>
+</section>
 
     </div>
   )

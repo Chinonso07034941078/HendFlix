@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { Droplet, ShieldCheck, Gauge, ArrowRight, Zap, Target, Flame } from "lucide-react"
+import { Droplet, ShieldCheck, Gauge, ArrowRight, Zap, Target, Flame, Users, Award, MapPin } from "lucide-react"
 import HomeHero from "../Components/HomeHero"
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
       <HomeHero />
 
       {/* =========================
-          SECTION 2: Philosophy
+          SECTION 2: About Hendflix
       ========================= */}
       <section className="relative bg-white overflow-hidden">
         <div className="absolute inset-0">
@@ -20,21 +20,21 @@ const Home = () => {
 
           <div className="max-w-2xl mb-20 md:mb-32 text-left">
             <p className="uppercase tracking-tight text-[#ed1616] font-semibold mb-4" style={{ fontSize: "0.7rem", fontWeight: "600" }}>
-              Engineering Philosophy
+              Who We Are
             </p>
 
             <h2 className="text-black leading-[1.1] mb-6" style={{ fontSize: "clamp(3.5rem, 5vw, 4.5rem)", fontFamily: "'Coolvetica', sans-serif" }}>
-              Precision
+              Hendflix
               <span className="block text-[#ed1616] font-medium">
-                Lubrication
+                Limited
               </span>
               <span className="block text-gray-500 mt-3 font-light" style={{ fontSize: "clamp(2.5rem, 3.5vw, 3.5rem)" }}>
-                Performance System
+                Trusted Texaco Supplier
               </span>
             </h2>
 
             <p className="text-gray-600 leading-relaxed font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-              Not a consumable—a controlled interface managing friction, heat, pressure, and time with precision.
+              A trusted engine oil and lubricants supply company committed to delivering high-quality Texaco products that keep engines running smoothly, efficiently, and reliably across Nigeria.
             </p>
           </div>
 
@@ -43,10 +43,10 @@ const Home = () => {
             <div className="col-span-12 md:col-span-7 row-span-2 bg-gradient-to-br from-black to-gray-900 rounded-3xl p-8 md:p-14 relative overflow-hidden group">
               <span className="text-6xl font-bold text-[#ed1616]/30 mb-6 block">01</span>
               <h3 className="mb-6" style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)", fontFamily: "'Coolvetica', sans-serif" }}>
-                Friction Management
+                Our Mission
               </h3>
               <p className="text-gray-300 leading-relaxed max-w-xl font-normal" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                Optimized molecular structures reduce metal-to-metal contact, enabling smoother operation and efficiency gains.
+                To supply high-quality engine oils that protect engines, improve performance, and help our customers reduce maintenance costs while driving with confidence.
               </p>
               <Link to="/about" className="mt-8 flex items-center gap-2 text-[#ed1616] font-medium" style={{ fontSize: "0.9rem", fontWeight: "500", letterSpacing: "0.3px" }}>
                 Learn More <ArrowRight className="w-4 h-4" />
@@ -56,30 +56,30 @@ const Home = () => {
             <div className="col-span-6 md:col-span-5 bg-white border rounded-2xl p-6 md:p-8">
               <span className="text-gray-400 font-medium" style={{ fontSize: "0.875rem", fontWeight: "300" }}>02</span>
               <h3 className="text-black mt-4 mb-3" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
-                Thermal Control
+                Our Vision
               </h3>
               <p className="text-gray-600 leading-relaxed font-normal" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                Stable viscosity across extreme temperatures ensures consistency.
+                To become a leading and trusted engine oil supply brand in Nigeria, recognized for quality products, integrity, and excellent customer service.
               </p>
             </div>
 
             <div className="col-span-6 md:col-span-5 row-span-2 bg-gradient-to-b from-[#ed1616] to-[#c01212] rounded-2xl p-6 md:p-10">
               <span className="text-white/70 font-medium" style={{ fontSize: "0.875rem", fontWeight: "300" }}>03</span>
               <h3 className="mt-6 mb-4" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
-                Surface Protection
+                Our Values - TRICE
               </h3>
               <p className="text-white/90 font-normal leading-relaxed" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                Active additives form protective films reducing wear.
+                Teamwork, Respect, Integrity, Commitment, Excellence - these core values guide everything we do.
               </p>
             </div>
 
             <div className="col-span-12 md:col-span-7 bg-gray-50 rounded-2xl p-8 md:p-10">
               <span className="text-gray-400 font-medium" style={{ fontSize: "0.875rem", fontWeight: "300" }}>04</span>
               <h3 className="text-black mt-4 mb-4" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
-                Operational Longevity
+                Why Choose Hendflix
               </h3>
               <p className="text-gray-600 font-normal leading-relaxed max-w-2xl" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                Extended service intervals reduce downtime and total cost.
+                Trusted supplier of original Texaco motor oil with competitive pricing, bulk and retail availability, and strong customer support.
               </p>
             </div>
 
@@ -88,7 +88,7 @@ const Home = () => {
       </section>
 
       {/* =========================
-          SECTION 3: Architecture
+          SECTION 3: Our Services
       ========================= */}
       <section className="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white relative overflow-hidden">
         
@@ -98,21 +98,21 @@ const Home = () => {
 
           <div className="max-w-3xl mb-20 md:mb-32">
             <p className="uppercase tracking-tight text-[#ed1616] font-semibold mb-6" style={{ fontSize: "0.7rem", fontWeight: "600" }}>
-              System Architecture
+              What We Do
             </p>
 
             <h2 className="leading-[1.1] mb-8" style={{ fontSize: "clamp(3.5rem, 5vw, 4.5rem)", fontFamily: "'Coolvetica', sans-serif" }}>
-              Lubrication
+              Texaco
               <span className="block text-gray-500 mt-2">
-                Works in
+                Engine Oil
               </span>
               <span className="block text-[#ed1616] mt-2">
-                Layers
+                Solutions
               </span>
             </h2>
 
             <p className="text-white/75 leading-relaxed border-l-4 border-[#ed1616] pl-6 font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-              Not in isolation—multiple interacting layers engineered to respond to mechanical stress in specific ways.
+              We provide dependable engine oil solutions through retail and bulk supply of Texaco motor oil for various applications across Nigeria.
             </p>
           </div>
 
@@ -122,20 +122,20 @@ const Home = () => {
               <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-10 md:p-12 hover:bg-white/10 hover:border-white/20 transition-all duration-500">
                 <Droplet className="w-10 h-10 text-[#ed1616] mb-6" />
                 <h3 className="mb-5" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
-                  Primary Lubrication Layer
+                  Premium Texaco Products
                 </h3>
                 <p className="text-white/75 leading-relaxed font-normal" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                  Maintains continuous separation between moving surfaces under variable loads and speeds with precision engineering.
+                  Original, premium-grade engine oils that meet global standards and support long-term engine health.
                 </p>
               </div>
 
               <div className="bg-gradient-to-br from-[#ed1616]/20 to-transparent border border-[#ed1616]/30 rounded-2xl p-8 md:p-10 hover:from-[#ed1616]/30 transition-all duration-500">
                 <h4 className="font-semibold text-white mb-4 text-xl flex items-center gap-3">
                   <span className="w-2 h-2 bg-[#ed1616] rounded-full" />
-                  Chemical Stability
+                  Expert Guidance
                 </h4>
                 <p className="text-white/75 leading-relaxed font-normal" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                  Resists oxidation and deposit formation over extended time periods.
+                  Support and guidance to help customers choose the right oil for their engine type.
                 </p>
               </div>
             </div>
@@ -144,20 +144,20 @@ const Home = () => {
               <div className="bg-gradient-to-br from-[#ed1616]/20 to-transparent border border-[#ed1616]/30 rounded-2xl p-8 md:p-10 hover:from-[#ed1616]/30 transition-all duration-500">
                 <h4 className="font-semibold text-white mb-4 text-xl flex items-center gap-3">
                   <span className="w-2 h-2 bg-[#ed1616] rounded-full" />
-                  Thermal Regulation
+                  Flexible Supply
                 </h4>
                 <p className="text-white/75 leading-relaxed font-normal" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                  Controls heat transfer and prevents viscosity collapse under extreme conditions.
+                  Retail and wholesale supply with flexible order quantities and delivery options available.
                 </p>
               </div>
 
               <div className="bg-white text-black rounded-3xl p-10 md:p-12 hover:shadow-2xl hover:shadow-[#ed1616]/30 transition-all duration-500">
                 <Flame className="w-10 h-10 text-[#ed1616] mb-6" />
                 <h4 className="font-semibold mb-4" style={{ fontSize: "1.125rem", fontFamily: "'Coolvetica', sans-serif" }}>
-                  Surface Protection
+                  Quality Assurance
                 </h4>
                 <p className="text-gray-600 leading-relaxed font-normal" style={{ fontSize: "0.875rem", fontWeight: "300" }}>
-                  Forms protective films that reduce wear and fatigue, extending component life dramatically.
+                  Our products are carefully sourced to ensure authenticity, quality, and consistency.
                 </p>
               </div>
             </div>
@@ -167,7 +167,7 @@ const Home = () => {
       </section>
 
       {/* =========================
-          SECTION 4: Certifications
+          SECTION 4: Who We Serve
       ========================= */}
       <section className="bg-white relative overflow-hidden">
         
@@ -177,43 +177,36 @@ const Home = () => {
 
           <div className="max-w-4xl mx-auto text-center mb-24 md:mb-36">
             <p className="uppercase tracking-tight text-[#ed1616] font-semibold mb-6 inline-block border-b-2 border-[#ed1616] pb-2" style={{ fontSize: "0.7rem", fontWeight: "600" }}>
-              Proven & Trusted
+              Our Customers
             </p>
             <h2 className="text-black leading-[1.1] mb-8" style={{ fontSize: "clamp(3.5rem, 5vw, 4.5rem)", fontFamily: "'Coolvetica', sans-serif" }}>
-              Recognized
+              Who We
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ed1616] to-[#ff4444] mt-2">
-                Standards
+                Serve
               </span>
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-              Certified to meet the highest industry standards globally.
+              Providing quality Texaco engine oils to a diverse range of customers across Nigeria.
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 mb-20">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6 mb-20">
 
             {[
-              { name: "API", logo: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740729/garett-mizunaka-xFjti9rYILo-unsplash_rbtvoe.jpg", size: "normal" },
-              { name: "SAE", logo: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740729/setengah-limasore-Suz290ywLYU-unsplash_mdeise.jpg", size: "large" },
-              { name: "ISO 9001", logo: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740719/setengah-limasore-jlbbm_IerPE-unsplash_bgzbyc.jpg", size: "normal" },
-              { name: "ISO 14001", logo: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740705/georg-eiermann-n9j3wbSJzNM-unsplash_nx6ytg.jpg", size: "tall" },
-              { name: "OEM", logo: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/lucas-larsson-41M7Xr6cEks-unsplash_absmd9.jpg", size: "normal" },
-              { name: "JASO", logo: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740703/robert-laursoo-my6Q5k_WmoI-unsplash_hynhjx.jpg", size: "wide" },
-            ].map((cert, i) => (
+              { name: "Private Car Owners", icon: <Users className="w-8 h-8" /> },
+              { name: "Commercial Drivers", icon: <MapPin className="w-8 h-8" /> },
+              { name: "Transport Companies", icon: <Target className="w-8 h-8" /> },
+              { name: "Service Centers", icon: <ShieldCheck className="w-8 h-8" /> },
+              { name: "Industrial Users", icon: <Gauge className="w-8 h-8" /> },
+            ].map((customer, i) => (
               <div 
                 key={i} 
-                className={`
-                  ${cert.size === 'large' ? 'col-span-2 row-span-2' : ''}
-                  ${cert.size === 'tall' ? 'row-span-2' : ''}
-                  ${cert.size === 'wide' ? 'col-span-2' : ''}
-                  group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:border-[#ed1616] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500
-                `}
+                className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 hover:border-[#ed1616] hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 p-8 flex flex-col items-center justify-center text-center"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-[#ed1616]/0 to-[#ed1616]/0 group-hover:from-[#ed1616]/10 group-hover:to-transparent transition-all duration-500" />
-                <div className="relative p-8 h-full flex flex-col items-center justify-center space-y-4">
-                  <img src={cert.logo} alt={cert.name} className="h-16 object-contain grayscale group-hover:grayscale-0 transition-all duration-500" />
-                  <p className="text-center text-sm font-semibold text-gray-700 group-hover:text-[#ed1616] transition-colors">{cert.name}</p>
+                <div className="text-[#ed1616] mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {customer.icon}
                 </div>
+                <p className="text-center text-sm font-semibold text-gray-700 group-hover:text-[#ed1616] transition-colors">{customer.name}</p>
               </div>
             ))}
 
@@ -222,14 +215,14 @@ const Home = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 bg-black text-white rounded-3xl p-10 md:p-16">
             <div className="max-w-xl">
               <h3 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: "'Coolvetica', sans-serif" }}>
-                Verified Performance
+                Nationwide Coverage
               </h3>
               <p className="text-white/75 font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-                Backed by global standards. Discover the formulations trusted worldwide.
+                Serving customers across Nigeria with reliable Texaco engine oil solutions.
               </p>
             </div>
-            <Link to="/products" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-[#ed1616] hover:shadow-2xl transition-all duration-300 whitespace-nowrap" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
-              Explore Products →
+            <Link to="/contact" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-[#ed1616] hover:shadow-2xl transition-all duration-300 whitespace-nowrap" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+              Contact Us →
             </Link>
           </div>
 
@@ -237,7 +230,7 @@ const Home = () => {
       </section>
 
       {/* =========================
-          SECTION 5: Products
+          SECTION 5: Our Products
       ========================= */}
       <section className="bg-gray-50 overflow-hidden relative">
         
@@ -247,19 +240,19 @@ const Home = () => {
 
           <div className="max-w-3xl mb-24 md:mb-36">
             <p className="uppercase tracking-tight text-[#ed1616] font-semibold mb-6 transform -rotate-2 inline-block" style={{ fontSize: "0.7rem", fontWeight: "600" }}>
-              Product Portfolio
+              Texaco Products
             </p>
             <h2 className="text-black leading-[1.05] mb-8" style={{ fontSize: "clamp(3.5rem, 5vw, 4.5rem)", fontFamily: "'Coolvetica', sans-serif" }}>
-              Select the
+              Premium
               <span className="block text-[#ed1616] font-medium mt-2 transform rotate-1">
-                Perfect
+                Engine Oils
               </span>
               <span className="block text-gray-500 text-4xl md:text-6xl mt-3 font-light" style={{ fontSize: "clamp(2.5rem, 3.5vw, 3.5rem)" }}>
-                Lubricant
+                & Lubricants
               </span>
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-2xl border-l-4 border-[#ed1616] pl-6 font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-              Tailored for specific applications—choose based on viscosity, load, and operating conditions.
+              We supply a range of Texaco motor oils and lubricants, suitable for petrol and diesel engines, light-duty and heavy-duty vehicles, and industrial equipment.
             </p>
           </div>
 
@@ -267,44 +260,44 @@ const Home = () => {
 
             {[
               {
-                name: "HendFlix 5W-30",
-                type: "Synthetic",
-                viscosity: "5W-30",
+                name: "Texaco Havoline",
+                type: "Passenger Cars",
+                viscosity: "5W-30, 10W-40",
                 image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/lucas-larsson-41M7Xr6cEks-unsplash_absmd9.jpg",
                 span: "md:col-span-5"
               },
               {
-                name: "HendFlix 10W-40",
-                type: "Semi-Synthetic",
-                viscosity: "10W-40",
+                name: "Texaco Ursa",
+                type: "Heavy-Duty",
+                viscosity: "15W-40, 20W-50",
                 image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740720/andreas-brun-Rm5_uSGkRmY-unsplash_ohshi3.jpg",
                 span: "md:col-span-7"
               },
               {
-                name: "HendFlix HD",
-                type: "Heavy-Duty",
-                viscosity: "15W-40",
+                name: "Texaco Meropa",
+                type: "Industrial Gear",
+                viscosity: "ISO VG 220-460",
                 image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740705/georg-eiermann-n9j3wbSJzNM-unsplash_nx6ytg.jpg",
                 span: "md:col-span-4"
               },
               {
-                name: "Industrial Gear",
-                type: "Machines",
-                viscosity: "ISO VG 220",
+                name: "Texaco HDAX",
+                type: "Hydraulic Systems",
+                viscosity: "ISO VG 32-68",
                 image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/robert-laursoo-my6Q5k_WmoI-unsplash_1_dygcq7.jpg",
                 span: "md:col-span-4"
               },
               {
-                name: "Hydraulic Oil",
-                type: "Systems",
-                viscosity: "ISO VG 46",
+                name: "Texaco Starplex",
+                type: "Multi-Purpose Grease",
+                viscosity: "NLGI 1-2",
                 image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740710/jan-kopriva-AVlOmTRe9mY-unsplash_fslqvv.jpg",
                 span: "md:col-span-4"
               },
               {
-                name: "Grease EP2",
-                type: "Multi-Purpose",
-                viscosity: "NLGI 2",
+                name: "Texaco Delo",
+                type: "Diesel Engines",
+                viscosity: "15W-40",
                 image: "https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740719/setengah-limasore-jlbbm_IerPE-unsplash_bgzbyc.jpg",
                 span: "md:col-span-6"
               },
@@ -331,7 +324,7 @@ const Home = () => {
 
           <div className="mt-24 md:mt-36 max-w-2xl ml-auto text-right">
             <p className="text-gray-600 mb-8 font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-              Each lubricant tested to deliver peak performance.
+              Each Texaco product is designed to reduce engine wear, improve fuel efficiency, and extend engine lifespan.
             </p>
             <Link to="/products" className="px-16 py-6 bg-black text-white font-semibold rounded-full hover:bg-[#ed1616] hover:shadow-2xl hover:shadow-[#ed1616]/30 transition-all duration-300 transform hover:scale-105" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
               View Full Catalog
@@ -342,23 +335,23 @@ const Home = () => {
       </section>
 
       {/* =========================
-          SECTION 6: Testimonials
+          SECTION 6: Founder Profile
       ========================= */}
       <section className="bg-white overflow-hidden">
         <div className="max-w-[1800px] mx-auto px-6 py-32 md:py-48">
 
           <div className="max-w-4xl mx-auto text-center mb-24 md:mb-36 transform -rotate-1">
             <p className="uppercase tracking-tight text-[#ed1616] font-semibold mb-6" style={{ fontSize: "0.7rem", fontWeight: "600" }}>
-              Proven in Action
+              Leadership
             </p>
             <h2 className="text-black leading-[1.05] mb-8" style={{ fontSize: "clamp(3.5rem, 5vw, 4.5rem)", fontFamily: "'Coolvetica', sans-serif" }}>
-              Trusted by
+              Meet Our
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#ed1616] to-[#ff4444] mt-2">
-                Professionals
+                Founder
               </span>
             </h2>
             <p className="text-gray-600 leading-relaxed max-w-2xl mx-auto font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-              Used daily across automotive, industrial, and heavy-duty applications.
+              Led by a passionate expert committed to quality automotive care and sustainable business growth.
             </p>
           </div>
 
@@ -366,48 +359,53 @@ const Home = () => {
 
             <div className="col-span-12 lg:col-span-8 relative rounded-3xl overflow-hidden shadow-2xl group transform hover:scale-[1.02] transition-all duration-700">
               <img
-                src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767742222/photo-1556838656-af51dadc2c93_iorhzq.avif"
-                alt="Fleet engines"
+                src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767961922/fff23d66-ca4e-41c9-aacf-1e385853d38f.png"
+                alt="Henry Emeh"
                 className="w-full h-[500px] md:h-[700px] object-cover transition-transform duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
               <div className="absolute bottom-10 left-10 right-10 text-white">
                 <span className="inline-block mb-4 px-5 py-2 bg-[#ed1616] rounded-full text-sm font-semibold">
-                  Fleet Management
+                  Founder & Managing Director
                 </span>
                 <h3 className="text-4xl md:text-6xl font-bold leading-tight mb-4" style={{ fontFamily: "'Coolvetica', sans-serif" }}>
-                  35% Less
-                  <span className="block text-[#ed1616] font-medium">Engine Wear</span>
+                  Henry
+                  <span className="block text-[#ed1616] font-medium">Emeh</span>
                 </h3>
-                <p className="text-lg md:text-xl text-gray-300 font-normal">120 trucks · 12 months</p>
+                <p className="text-lg md:text-xl text-gray-300 font-normal">Quality Automotive Care Expert</p>
               </div>
             </div>
 
             <div className="col-span-12 lg:col-span-4 flex flex-col gap-4 md:gap-6">
 
               <div className="relative rounded-2xl overflow-hidden shadow-xl group transform hover:-rotate-2 transition-all duration-500">
-                <img
-                  src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767742229/premium_photo-1663047014497-34b57567f0c9_shiygh.avif"
-                  alt="Industrial"
-                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <h4 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Coolvetica', sans-serif" }}>Industrial</h4>
-                  <p className="text-sm text-gray-300 font-normal">+20% maintenance cycles</p>
+                <div className="bg-gradient-to-br from-[#ed1616] to-[#c01212] p-8 h-full">
+                  <h4 className="text-2xl font-bold mb-4 text-white" style={{ fontFamily: "'Coolvetica', sans-serif" }}>Founder's Approach</h4>
+                  <p className="text-white/90 font-normal italic">"I believe that engine performance starts with the right oil. When quality comes first, reliability follows."</p>
                 </div>
               </div>
 
               <div className="relative rounded-2xl overflow-hidden shadow-xl group transform hover:rotate-2 transition-all duration-500">
-                <img
-                  src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767742209/photo-1609872209699-3e55dc7d90b9_ltg0jj.avif"
-                  alt="Automotive"
-                  className="w-full h-80 object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 text-white">
-                  <h4 className="text-2xl font-bold mb-2" style={{ fontFamily: "'Coolvetica', sans-serif" }}>Automotive</h4>
-                  <p className="text-sm text-gray-300 font-normal">Higher satisfaction</p>
+                <div className="bg-gray-50 p-8 h-full">
+                  <h4 className="text-2xl font-bold mb-4 text-black" style={{ fontFamily: "'Coolvetica', sans-serif" }}>Responsibilities</h4>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#ed1616] mt-1">•</span>
+                      <span>Strategic planning and business growth</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#ed1616] mt-1">•</span>
+                      <span>Product sourcing and quality control</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#ed1616] mt-1">•</span>
+                      <span>Customer relationship management</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-[#ed1616] mt-1">•</span>
+                      <span>Brand development and operations</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
@@ -418,15 +416,15 @@ const Home = () => {
           <div className="mt-24 md:mt-36 grid md:grid-cols-2 gap-8 items-center bg-gradient-to-br from-gray-900 to-black text-white rounded-3xl p-12 md:p-16 transform rotate-1">
             <div>
               <h3 className="text-3xl md:text-5xl font-bold mb-4 leading-tight" style={{ fontFamily: "'Coolvetica', sans-serif" }}>
-                Measurable Results
+                Quality Commitment
               </h3>
               <p className="text-white/75 font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-                Ready to achieve similar outcomes?
+                Under Henry's leadership, Hendflix Limited has grown with a focus on quality, customer trust, and long-term value.
               </p>
             </div>
             <div className="flex justify-end">
               <Link to="/about" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-black hover:shadow-2xl transition-all duration-300" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
-                Discover How →
+                Learn More →
               </Link>
             </div>
           </div>
@@ -435,7 +433,7 @@ const Home = () => {
       </section>
 
       {/* =========================
-          SECTION 7: Distributor
+          SECTION 7: Contact
       ========================= */}
       <section className="bg-gradient-to-br from-black via-gray-900 to-black text-white overflow-hidden relative">
         
@@ -451,27 +449,27 @@ const Home = () => {
             <div className="lg:col-span-7 space-y-10">
               <div className="transform -rotate-2">
                 <p className="uppercase tracking-tight text-[#ed1616] font-semibold mb-6 inline-block border-b-2 border-[#ed1616] pb-2" style={{ fontSize: "0.7rem", fontWeight: "600" }}>
-                  Join Our Network
+                  Get In Touch
                 </p>
               </div>
 
               <h2 className="leading-[1.05]" style={{ fontSize: "clamp(3.5rem, 5vw, 4.5rem)", fontFamily: "'Coolvetica', sans-serif" }}>
-                Become a
+                Contact
                 <span className="block text-[#ed1616] font-medium mt-2">
-                  Distributor
+                  Hendflix Limited
                 </span>
               </h2>
 
               <p className="text-white/75 leading-relaxed max-w-2xl border-l-4 border-[#ed1616] pl-6 font-normal" style={{ fontSize: "clamp(0.95rem, 1.2vw, 1.125rem)", fontWeight: "300" }}>
-                Partner with us for world-class lubrication solutions, dedicated support, and exclusive pricing.
+                Reach out to us for premium Texaco engine oils and lubricants. We're here to help you choose the right products for your needs.
               </p>
 
               <div className="grid sm:grid-cols-2 gap-6 pt-8">
                 {[
-                  { icon: <ShieldCheck className="w-6 h-6" />, text: "Technical Support" },
-                  { icon: <Gauge className="w-6 h-6" />, text: "Exclusive Pricing" },
-                  { icon: <Target className="w-6 h-6" />, text: "Marketing Assistance" },
-                  { icon: <Zap className="w-6 h-6" />, text: "Full Catalog Access" },
+                  { icon: <ShieldCheck className="w-6 h-6" />, text: "Product Expertise" },
+                  { icon: <Gauge className="w-6 h-6" />, text: "Competitive Pricing" },
+                  { icon: <Target className="w-6 h-6" />, text: "Bulk Supply" },
+                  { icon: <Zap className="w-6 h-6" />, text: "Fast Delivery" },
                 ].map((benefit, i) => (
                   <div key={i} className={`flex items-center gap-4 group p-5 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 hover:border-[#ed1616]/50 transition-all duration-500 ${i % 2 === 0 ? 'transform -rotate-1' : 'transform rotate-1'}`}>
                     <span className="text-[#ed1616] group-hover:scale-125 transition-transform duration-300">
@@ -483,11 +481,11 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-5 pt-8">
-                <Link to="/partner" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-black hover:shadow-2xl hover:shadow-[#ed1616]/50 transition-all duration-300 transform hover:scale-105" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
-                  Become a Distributor
+                <Link to="/contact" className="px-12 py-5 bg-[#ed1616] text-white font-semibold rounded-full hover:bg-white hover:text-black hover:shadow-2xl hover:shadow-[#ed1616]/50 transition-all duration-300 transform hover:scale-105" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+                  Contact Us
                 </Link>
-                <Link to="/contact" className="px-12 py-5 bg-transparent border-2 border-white/30 font-semibold rounded-full hover:border-[#ed1616] hover:bg-[#ed1616]/10 transition-all duration-300" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
-                  Contact Sales
+                <Link to="/products" className="px-12 py-5 bg-transparent border-2 border-white/30 font-semibold rounded-full hover:border-[#ed1616] hover:bg-[#ed1616]/10 transition-all duration-300" style={{ fontSize: "0.9rem", fontWeight: "600", letterSpacing: "0.3px" }}>
+                  View Products
                 </Link>
               </div>
             </div>
@@ -496,20 +494,20 @@ const Home = () => {
               <div className="relative rounded-3xl overflow-hidden shadow-2xl group transform rotate-2 hover:rotate-0 transition-all duration-700">
                 <img
                   src="https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767742410/premium_photo-1661768507909-f961fcff0d45_ti1apl.avif"
-                  alt="Distributor network"
+                  alt="Hendflix Limited office"
                   className="w-full h-[600px] object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8 bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
                   <p className="text-lg font-semibold leading-relaxed">
-                    Trusted partners worldwide expanding HendFlix reach.
+                    Serving customers across Nigeria with quality Texaco products.
                   </p>
                 </div>
               </div>
               
               <div className="absolute -top-8 -right-8 bg-[#ed1616] text-white p-6 rounded-2xl shadow-2xl transform rotate-12 hover:rotate-6 transition-all duration-500">
-                <p className="text-4xl font-bold">50+</p>
-                <p className="text-sm font-semibold">Countries</p>
+                <p className="text-4xl font-bold">100%</p>
+                <p className="text-sm font-semibold">Original</p>
               </div>
             </div>
 

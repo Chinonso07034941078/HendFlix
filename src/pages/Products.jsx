@@ -14,128 +14,128 @@ import '@fontsource/montserrat/600.css';
 const products = [
   {
     id: 1,
-    name: 'Engine Max 5W-30',
-    desc: 'Full synthetic engine oil engineered for fuel efficiency and long-term protection.',
+    name: 'Texaco Havoline 5W-30',
+    desc: 'Premium full synthetic engine oil designed for modern passenger cars, providing excellent protection and fuel economy.',
     category: 'Automotive',
-    specs: ['API SN', 'ACEA A3/B4', 'Full Synthetic'],
+    specs: ['API SP', 'ACEA C5', 'Full Synthetic'],
     temp: '-40°C → 150°C',
-    image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767742222/photo-1556838656-af51dadc2c93_iorhzq.avif'
+    image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/lucas-larsson-41M7Xr6cEks-unsplash_absmd9.jpg'
   },
   {
     id: 2,
-    name: 'Hydraulic Ultra',
-    desc: 'Stable, anti-wear hydraulic fluid for high-load industrial systems.',
+    name: 'Texaco HDAX 320',
+    desc: 'High-performance hydraulic fluid for industrial systems with excellent anti-wear properties and thermal stability.',
     category: 'Industrial',
-    specs: ['ISO VG 46', 'DIN 51524', 'Anti-Wear'],
+    specs: ['ISO VG 320', 'DIN 51524', 'Anti-Wear'],
     temp: '-20°C → 120°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767742209/photo-1609872209699-3e55dc7d90b9_ltg0jj.avif'
   },
   {
     id: 3,
-    name: 'GearPro 80W-90',
-    desc: 'Extreme-pressure gear oil built for torque and endurance.',
-    category: 'Automotive',
-    specs: ['API GL-5', 'EP Additives'],
+    name: 'Texaco Meropa 220',
+    desc: 'Extreme-pressure gear oil for industrial gearboxes operating under severe conditions.',
+    category: 'Industrial',
+    specs: ['ISO VG 220', 'DIN 51517', 'EP Additives'],
     temp: '-30°C → 140°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740730/setengah-limasore-wV1c8II7Q5k-unsplash_rl43hs.jpg'
   },
   {
     id: 4,
-    name: 'Industrial Max Lube',
-    desc: 'Heavy-duty lubricant for continuous industrial operation.',
-    category: 'Industrial',
-    specs: ['ISO VG 220', 'Extreme Pressure'],
+    name: 'Texaco Ursa 15W-40',
+    desc: 'Heavy-duty diesel engine oil formulated for modern engines with extended drain intervals.',
+    category: 'Heavy-Duty',
+    specs: ['API CK-4', 'ACEA E9', 'Low SAPS'],
     temp: '-15°C → 130°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740729/garett-mizunaka-xFjti9rYILo-unsplash_rbtvoe.jpg'
   },
   {
     id: 5,
-    name: 'Synthetic Engine Oil',
-    desc: 'Low-friction synthetic oil for extended service intervals.',
+    name: 'Texaco Havoline 10W-40',
+    desc: 'Semi-synthetic engine oil for older passenger cars providing reliable protection and performance.',
     category: 'Automotive',
-    specs: ['Low SAPS', 'Extended Drain'],
-    temp: '-45°C → 160°C',
+    specs: ['API SN', 'ACEA A3/B4', 'Semi-Synthetic'],
+    temp: '-30°C → 130°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740729/setengah-limasore-Suz290ywLYU-unsplash_mdeise.jpg'
   },
   {
     id: 6,
-    name: 'Turbo Gear Lube',
-    desc: 'High-performance lubricant for racing and high-torque applications.',
-    category: 'Automotive',
-    specs: ['API GL-4', 'High EP'],
+    name: 'Texaco Delo 400 XSP',
+    desc: 'Advanced heavy-duty engine oil for modern diesel engines with emission control systems.',
+    category: 'Heavy-Duty',
+    specs: ['API FA-4', 'Low SAPS', 'Fuel Efficient'],
     temp: '-35°C → 150°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740726/setengah-limasore-wIaydZbvgE4-unsplash_lhfbx2.jpg'
   },
   {
     id: 7,
-    name: 'Industrial Gear Oil',
-    desc: 'Designed for heavy-duty gearboxes and industrial machinery.',
+    name: 'Texaco Meropa 460',
+    desc: 'High-viscosity industrial gear oil for heavy-duty applications and extreme pressure conditions.',
     category: 'Industrial',
-    specs: ['ISO VG 320', 'EP Additives'],
-    temp: '-20°C → 140°C',
+    specs: ['ISO VG 460', 'EP Additives', 'Thermal Stable'],
+    temp: '-10°C → 140°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740720/andreas-brun-Rm5_uSGkRmY-unsplash_ohshi3.jpg'
   },
   {
     id: 8,
-    name: 'Ultra Hydraulic Oil',
-    desc: 'High-performance oil for smooth operation in hydraulics under extreme load.',
+    name: 'Texaco HDAX 68',
+    desc: 'Premium hydraulic fluid for high-pressure systems with excellent water separation properties.',
     category: 'Industrial',
-    specs: ['ISO VG 68', 'Anti-Wear'],
+    specs: ['ISO VG 68', 'Anti-Wear', 'Anti-Foam'],
     temp: '-25°C → 130°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740719/eduardo-buscariolli-L-4mbXwL9yg-unsplash_boe2wz.jpg'
   },
   {
     id: 9,
-    name: 'Eco Synthetic Oil',
-    desc: 'Environmentally friendly synthetic oil for low emissions engines.',
+    name: 'Texaco Havoline 0W-20',
+    desc: 'Low viscosity full synthetic oil for fuel-efficient modern engines with tight tolerances.',
     category: 'Automotive',
-    specs: ['Low SAPS', 'Fuel Efficient'],
-    temp: '-40°C → 150°C',
+    specs: ['API SP', 'ACEA C2', 'Fuel Efficient'],
+    temp: '-40°C → 120°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740719/setengah-limasore-jlbbm_IerPE-unsplash_bgzbyc.jpg'
   },
   {
     id: 10,
-    name: 'Precision Gear Lube',
-    desc: 'Lubricant for precision machinery and sensitive automotive components.',
+    name: 'Texaco Starplex EP2',
+    desc: 'Multi-purpose extreme pressure grease for a wide range of industrial and automotive applications.',
     category: 'Industrial',
-    specs: ['ISO VG 150', 'Anti-Wear'],
-    temp: '-15°C → 140°C',
+    specs: ['NLGI 2', 'EP Additives', 'Water Resistant'],
+    temp: '-30°C → 140°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740712/benjamin-brunner-9ZTpCjmwL2M-unsplash_t9gt68.jpg'
   },
   {
     id: 11,
-    name: 'Max Turbo Oil',
-    desc: 'High-temp oil for turbocharged engines.',
-    category: 'Automotive',
-    specs: ['API SN', 'Turbo Additives'],
-    temp: '-30°C → 160°C',
+    name: 'Texaco Ursa 20W-50',
+    desc: 'Mineral-based heavy-duty engine oil for older diesel engines operating in severe conditions.',
+    category: 'Heavy-Duty',
+    specs: ['API CI-4', 'High TBN', 'Mineral Base'],
+    temp: '-20°C → 140°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/robert-laursoo-my6Q5k_WmoI-unsplash_1_dygcq7.jpg'
   },
   {
     id: 12,
-    name: 'Extreme Industrial Oil',
-    desc: 'Extreme-pressure oil for industrial applications with continuous load.',
+    name: 'Texaco HDAX 46',
+    desc: 'Versatile hydraulic fluid for general industrial applications with excellent anti-wear properties.',
     category: 'Industrial',
-    specs: ['ISO VG 460', 'EP'],
-    temp: '-10°C → 150°C',
+    specs: ['ISO VG 46', 'Anti-Wear', 'Thermal Stable'],
+    temp: '-20°C → 120°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/mark-boss-V___mbvgPhs-unsplash_zsusbj.jpg'
   },
   {
     id: 13,
-    name: 'Racing Synthetic Oil',
-    desc: 'Formulated for high-speed engines and extreme conditions.',
-    category: 'Automotive',
-    specs: ['API SN', 'Racing Additives'],
-    temp: '-35°C → 170°C',
+    name: 'Texaco Delo 400 SDE',
+    desc: 'Multi-grade heavy-duty engine oil for diesel engines in severe service conditions.',
+    category: 'Heavy-Duty',
+    specs: ['API CJ-4', 'ACEA E7', 'Extended Drain'],
+    temp: '-25°C → 130°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740705/georg-eiermann-n9j3wbSJzNM-unsplash_nx6ytg.jpg'
   },
   {
     id: 14,
-    name: 'Precision Engine Oil',
-    desc: 'Premium oil for long-lasting performance in precision engines.',
+    name: 'Texaco Havoline 5W-40',
+    desc: 'Full synthetic engine oil for high-performance engines requiring extra protection.',
     category: 'Automotive',
-    specs: ['API SN', 'Extended Drain'],
-    temp: '-45°C → 160°C',
+    specs: ['API SP', 'ACEA A3/B4', 'Full Synthetic'],
+    temp: '-35°C → 150°C',
     image: 'https://res.cloudinary.com/dnvgl9k4i/image/upload/v1767740704/lucas-larsson-41M7Xr6cEks-unsplash_absmd9.jpg'
   }
 ];
@@ -209,19 +209,19 @@ const Products = () => {
   <div className="relative max-w-7xl mx-auto px-6">
     <div className="max-w-4xl">
       <span className="inline-block mb-6 px-5 py-2 border border-[#ed1616]/60 rounded-full font-montserrat text-[0.625rem] tracking-tight text-[#ed1616] uppercase">
-        Products
+        Texaco Products
       </span>
 
       <h1 className="font-coolvetica text-[3.5rem] md:text-[4.5rem] leading-[1.1]">
-        Precision Lubrication
+        Premium Texaco
         <span className="block text-white/55 font-normal">
-          Built for Demanding Systems
+          Engine Oils & Lubricants
         </span>
       </h1>
 
       <p className="mt-6 font-montserrat text-[1.125rem] md:text-[1.25rem] font-light text-white/75 max-w-3xl">
-        HendFlix formulates advanced lubricants that protect critical
-        components, extend service life, and perform under continuous stress.
+        Hendflix Limited supplies original, premium-grade Texaco products that keep engines running smoothly, 
+        efficiently, and reliably across Nigeria. Each product is carefully sourced to ensure authenticity and quality.
       </p>
     </div>
   </div>
@@ -238,21 +238,21 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
           <div>
             <h2 className="font-coolvetica text-[3.5rem] md:text-[4rem] leading-tight">
-              Chemistry Meets<br />
-              <span className="text-white/50 font-normal">Mechanical Reality</span>
+              Texaco Quality<br />
+              <span className="text-white/50 font-normal">Meets Nigerian Demands</span>
             </h2>
             <p className="mt-6 font-montserrat text-[1rem] md:text-[1.125rem] font-light text-white/70">
-              Our lubricants are engineered to reduce friction, control heat,
-              and extend service life across extreme operational conditions.
+              Our Texaco lubricants are engineered to reduce engine wear, improve fuel efficiency, 
+              and extend engine lifespan across Nigeria's diverse operating conditions.
             </p>
           </div>
 
           <div className="space-y-6">
             {[
               ['Temperature Stability', '-45°C → 160°C'],
-              ['Wear Reduction', 'Up to 35%'],
-              ['Service Life', 'Up to 50% Longer'],
-              ['Friction Loss', '−15%']
+              ['Engine Wear Reduction', 'Up to 35%'],
+              ['Service Life Extension', 'Up to 50% Longer'],
+              ['Fuel Efficiency Improvement', 'Up to 3%']
             ].map(([k, v], i) => (
               <div
                 key={i}
@@ -266,23 +266,73 @@ const Products = () => {
         </div>
       </section>
 
+      {/* ================= WHO WE SERVE ================= */}
+      <section className="py-32 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-coolvetica text-[3.5rem] md:text-[4rem] mb-16">
+            Products For Every Need
+          </h2>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { 
+                title: 'Private Car Owners', 
+                desc: 'Quality-conscious vehicle owners seeking reliable engine protection',
+                products: 'Havoline 5W-30, 10W-40, 0W-20'
+              },
+              { 
+                title: 'Commercial Drivers', 
+                desc: 'Professional drivers who depend on engine reliability for daily operations',
+                products: 'Havoline 5W-40, Ursa 15W-40'
+              },
+              { 
+                title: 'Transport Companies', 
+                desc: 'Fleet operators managing multiple vehicles across Nigeria',
+                products: 'Ursa 15W-40, Delo 400 Series'
+              },
+              { 
+                title: 'Service Centers', 
+                desc: 'Workshops and service centers providing professional maintenance',
+                products: 'Full Texaco Range'
+              },
+              { 
+                title: 'Industrial Users', 
+                desc: 'Businesses using generators and heavy machinery',
+                products: 'HDAX, Meropa, Starplex'
+              },
+              { 
+                title: 'Agricultural Sector', 
+                desc: 'Farms and agricultural operations with equipment needs',
+                products: 'Ursa 20W-50, Delo 400 SDE'
+              }
+            ].map((customer, i) => (
+              <div key={i} className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-[#ed1616] transition-all duration-300">
+                <h3 className="font-coolvetica text-[1.125rem] mb-3">{customer.title}</h3>
+                <p className="font-montserrat text-[0.95rem] font-light text-gray-600 mb-4">{customer.desc}</p>
+                <p className="font-montserrat text-[0.875rem] font-semibold text-[#ed1616]">{customer.products}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ================= CTA ================= */}
       <section className="py-40 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="font-coolvetica text-[3.5rem] md:text-[4rem]">
-            Built for Demands<br />
-            <span className="text-gray-500 font-normal">That Never Pause</span>
+            Original Texaco<br />
+            <span className="text-gray-500 font-normal">Products Across Nigeria</span>
           </h2>
           <p className="mt-6 font-montserrat text-[1rem] md:text-[1.125rem] font-light text-gray-600">
-            Request specifications, pricing, or technical guidance.
+            Request specifications, pricing, or technical guidance from our team of experts.
           </p>
 
           <div className="mt-10 flex justify-center gap-6">
             <Link to="/contact" className="px-12 py-4 bg-[#ed1616] text-white rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:bg-[#d01414] transition inline-block">
-              Connect with Us
+              Contact Hendflix
             </Link>
             <Link to="/products" className="px-12 py-4 border border-gray-300 rounded-full font-montserrat text-[0.9rem] font-medium tracking-[0.3px] hover:border-[#ed1616] hover:text-[#ed1616] transition inline-block">
-              See Catalog
+              View Full Catalog
             </Link>
           </div>
         </div>

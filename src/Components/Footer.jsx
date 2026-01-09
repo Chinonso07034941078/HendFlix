@@ -15,33 +15,33 @@ function Footer() {
 
   const quickLinks = [
     { id: 'home', label: 'Home', path: '/' },
-    { id: 'about', label: 'About', path: '/about' },
-    { id: 'products', label: 'Products', path: '/shop' },
-    { id: 'partner', label: 'Partner', path: '/partner' },
-    { id: 'contacts', label: 'Contacts', path: '/contact' }
+    { id: 'about', label: 'About Us', path: '/about' },
+    { id: 'products', label: 'Texaco Products', path: '/shop' },
+    { id: 'partner', label: 'Become a Distributor', path: '/partner' },
+    { id: 'contacts', label: 'Contact Us', path: '/contact' }
   ]
 
   const productCategories = [
-    { label: 'Automotive Oils', path: '/shop?category=automotive' },
-    { label: 'Industrial Lubricants', path: '/shop?category=industrial' },
-    { label: 'Heavy-Duty Solutions', path: '/shop?category=heavy-duty' },
-    { label: 'Hydraulic Fluids', path: '/shop?category=hydraulic' },
-    { label: 'Gear Oils', path: '/shop?category=gear' }
+    { label: 'Texaco Havoline', path: '/shop?category=havoline' },
+    { label: 'Texaco Ursa', path: '/shop?category=ursa' },
+    { label: 'Texaco Delo', path: '/shop?category=delo' },
+    { label: 'Texaco Meropa', path: '/shop?category=meropa' },
+    { label: 'Texaco HDAX', path: '/shop?category=hdax' }
   ]
 
   const resources = [
     { label: 'Technical Data Sheets', path: '/resources/technical' },
-    { label: 'Safety Information', path: '/resources/safety' },
     { label: 'Product Catalog', path: '/resources/catalog' },
     { label: 'Certifications', path: '/resources/certifications' },
-    { label: 'FAQs', path: '/resources/faqs' }
+    { label: 'Our Core Values (TRICE)', path: '/about#values' },
+    { label: 'Founder Profile', path: '/about#founder' }
   ]
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com', label: 'Facebook' },
-    { icon: Twitter, href: 'https://twitter.com', label: 'Twitter' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Instagram, href: 'https://instagram.com', label: 'Instagram' }
+    { icon: Facebook, href: 'https://www.facebook.com/share/17v1yxgv5N/', label: 'Facebook' },
+    // { icon: Twitter, href: 'https://twitter.com/hendflixng', label: 'Twitter' },
+    // { icon: Linkedin, href: 'https://linkedin.com/company/hendflix-limited', label: 'LinkedIn' },
+    { icon: Instagram, href: 'https://www.instagram.com/hendflix_global_resources?igsh=MXh3dTJtcXI0Y2U5MQ==', label: 'Instagram' }
   ]
 
   return (
@@ -182,18 +182,17 @@ function Footer() {
                 </Link>
 
                 <p className="paragraph-text text-gray-100 leading-relaxed max-w-sm mt-4 relative z-10">
-                  Engineering excellence in lubrication technology. HendFlix delivers
-                  precision-formulated lubricants designed to protect, perform, and
-                  extend the life of your equipment.
+                  Hendflix Limited is a trusted engine oil and lubricants supply company committed to delivering 
+                  high-quality Texaco products that keep engines running smoothly, efficiently, and reliably across Nigeria.
                 </p>
 
                 {/* Contact */}
                 <div className="space-y-3 pt-6 relative z-10">
-                  <a href="tel:+1234567890" className="flex items-center gap-3 text-gray-200 hover:text-[#ed1616] transition group">
+                  <a href="tel:+2348000000000" className="flex items-center gap-3 text-gray-200 hover:text-[#ed1616] transition group">
                     <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-[#ed1616] transition">
                       <Phone className="w-4 h-4" />
                     </div>
-                    <span className="paragraph-text">+1 (234) 567-890</span>
+                    <span className="paragraph-text">+234 800 000 0000</span>
                   </a>
 
                   <a href="mailto:info@hendflix.com" className="flex items-center gap-3 text-gray-200 hover:text-[#ed1616] transition group">
@@ -208,8 +207,8 @@ function Footer() {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <span className="paragraph-text">
-                      123 Industrial Blvd, Suite 100<br />
-                      Houston, TX 77001, USA
+                      Lagos, Nigeria<br />
+                      Serving customers nationwide
                     </span>
                   </div>
                 </div>
@@ -231,7 +230,7 @@ function Footer() {
 
               {/* Products */}
               <div className="lg:col-span-3">
-                <h3 className="section-label mb-6">Products</h3>
+                <h3 className="section-label mb-6">Texaco Products</h3>
                 <ul className="space-y-3">
                   {productCategories.map((item, i) => (
                     <li key={i}>
@@ -264,7 +263,7 @@ function Footer() {
                 <div>
                   <h3 className="hero-subheading mb-3">Stay Updated</h3>
                   <p className="paragraph-text text-gray-400">
-                    Subscribe for product updates, technical insights, and industry news.
+                    Subscribe for product updates, technical insights, and special offers on Texaco products.
                   </p>
                 </div>
 
